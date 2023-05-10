@@ -1,0 +1,48 @@
+DROP TABLE IF EXISTS favourites CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS customers CASCADE;
+DROP TABLE IF EXISTS foods CASCADE;
+DROP TABLE IF EXISTS shopping_cart_items CASCADE;
+
+CREATE TABLE foods (
+  id SERIAL PRIMARY KEY NOT NULL,
+  food_name VARCHAR(255) NOT NULL,
+  price DECIMAL(5,2) NOT NULL,
+  in_stock INTEGER,
+  wait_time INTEGER,
+  description TEXT NOT NULL,
+  quantity INTEGER,
+  category TEXT NOT NULL
+);
+
+CREATE TABLE customers (
+  id SERIAL PRIMARY KEY NOT NULL,
+  full_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(20) NOT NULL,
+  payment_method VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY NOT NULL,
+  created_at TIMESTAMP DEFAULT now(),
+  quantity INTEGER NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  food_id INTEGER REFERENCES foods(id) ON DELETE CASCADE,
+  customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE
+);
+
+CREATE TABLE favourites (
+  id SERIAL PRIMARY KEY NOT NULL,
+  customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
+  food_id INTEGER REFERENCES foods(id) ON DELETE CASCADE
+);
+
+CREATE TABLE shopping_cart_items (
+  id SERIAL PRIMARY KEY NOT NULL,
+  food_id INTEGER REFERENCES foods(id) ON DELETE CASCADE,
+  customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
+  order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE,
+  quantity_item INTEGER NOT NULL,
+);

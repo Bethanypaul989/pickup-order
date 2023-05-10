@@ -1,0 +1,29 @@
+1) As a hungry client, I want to be able to easily order food for pick-up from my favourite restaurant's
+    website, so that I can save time and avoid the hassle of waiting in line.
+
+
+2) When I visit the restaurant's website, I am presented with a list of menu items and their prices. I can
+     select one or more dishes, and add them to my cart.
+
+3). As a user I want to be able to view food photos of the restaurant’s favourite dishes, to help me make a
+    decision on what to order
+
+4) Once I have added all the items I want to my cart, I can proceed to checkout.
+
+5) At checkout, I am asked to provide my name, phone number, and payment information. I can choose to
+     pay with a credit card or with cash at the restaurant.
+
+6) After I submit my order, the restaurant receives an SMS notification with the details of my order,
+     including my name and phone number.
+
+7) The restaurant can then specify how long it will take to fulfill my order. Once they provide this
+     information, I receive an SMS notification with the estimated wait time.
+
+8) As a user I want to be able to view the updates on my order on the website (automated)
+
+9)  When my order is ready, I receive another SMS notification letting me know that it's time to come pick it
+      up.
+
+10) At the restaurant, I show my order confirmation on my phone, and I am handed my food. Overall, I
+    appreciate the convenience and simplicity of this food ordering system, and I am more likely to order
+    from this restaurant again in the future.

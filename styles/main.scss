@@ -1,22 +1,18 @@
-* {
-  box-sizing: border-box;
-}
-
-nav {
-  position: fixed;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 120px;
-  color: #ffffff;
-  background-color: #000000;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-}
 nav span {
   display: flex;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  min-height: 100 vh;
+  justify-content: space-between;
+  font-size: 20px;
+
+  background: rgb(0, 0, 0);
+}
+
+#cart{
+  color: rgb(255, 0, 0);
 }

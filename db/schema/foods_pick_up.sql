@@ -44,5 +44,5 @@ CREATE TABLE shopping_cart_items (
   food_id INTEGER REFERENCES foods(id) ON DELETE CASCADE,
   customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
   order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE,
-  quantity_item INTEGER NOT NULL,
+  quantity_item INTEGER NOT NULL
 );

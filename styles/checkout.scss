@@ -1,0 +1,59 @@
+$black-color: #000;
+$white-color:#fff;
+
+body{
+  margin:0;
+  padding:0;
+}
+
+header{
+  nav{
+    .nav-container{
+      display: flex;
+      background-color: $black-color;
+      color:$white-color;
+      padding:40px ;
+      justify-content: space-between;
+
+    }
+    .navbar{
+      padding-left:50px;
+      text-decoration: none;
+      color: $white-color;
+    }
+    .icon{
+      padding-left:20px;
+    }
+  }
+}
+
+
+section{
+  .page-name{
+    margin:4% 0;
+    display:flex;
+    justify-content: center;
+  }
+    .checkout{
+    flex:10;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+  }
+    .home{
+    flex: 1;
+    text-decoration: none;
+    color:$black-color;
+    padding:10px
+  }
+}
+
+main{
+  display: flex;
+  .contact-info{
+    flex:1
+  }
+  .order-info{
+  flex:1
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/checkout.css">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div>
+          <a href="/"> <img src="../images/logo.png" alt="logo"></a>
+        </div>
+        <div class="nav-links">
+          <a class="navbar home" href="/">Home</a>
+          <a class="navbar menu" href="/menu">Menu</a>
+          <a class="navbar about-us" href="/about-us">About Us</a>
+          <a class="navbar contact" href="/contact">Contact</a>
+        </div>
+        <div class="nav-icons">
+          <i class="icon">account</i>
+          <i class="icon">phone </i>
+          <i class="icon">cart</i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="page-name">
+      <div class="checkout">Check out</div>
+      <a class="home" href="/">Back to menu</a>
+    </div>
+  </section>
+
+  <main>
+    <form action="/orders/submit" method="post">
+      <div class="contact-info">
+        <h1>Contact information</h1>
+        <div>
+          <input type="text" name="fullname" placeholder="Fullname">
+        </div>
+        <div>
+          <input type="text" name="phoneNumber" placeholder="Phone number">
+        </div>
+        <div>
+          <input type="text" name="emailAddress" placeholder="Email address">
+        </div>
+
+        <div>
+          <p>CHOOSE PAYMENT METHOD</p>
+          <div class="cash">
+            <input type="radio" name="payment" value="Cash" id="cash">
+            <label for="">Cash</label>
+          </div>
+          <div class="credit-card">
+            <input type="radio" name="payment" value="CreditCard" id="credit-card">
+            <label for="credit-card">Credit Card</label>
+          </div> <br>
+          <input type="text" name="cardNumber" id="" placeholder="Card Number">
+          <input type="month" name="expDate" id="" placeholder="Expiration Date">
+          <input type="text" name="cvc" id="" placeholder="CVC">
+        </div>
+        <button type="submit">submit </button>
+    </form>
+    </div>
+
+    <div class="order-info">
+      <h1>Order confirmation</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Food Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(const item in items){ %>
+            <tr>
+              <td>
+                <%= items[item].food_name %>
+              </td>
+              <td>
+                <%= items[item].quantity %>
+              </td>
+              <td>$<%= items[item].price %>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </div>
+    </section>
+
+
+    <footer>
+    </footer>
+</body>
+
+</html>

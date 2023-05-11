@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  color: rgb(113, 76, 30);
-  background-color: rgb(43, 30, 30);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 .menu-items {
@@ -23,31 +23,31 @@ flex-wrap: wrap;
 
 .menu-items h3 {
   font-family: 'Press Start 2P', cursive;
-  color: rgb(113, 76, 30);
+  color: rgb(237, 142, 33);
 }
 
 .item {
-  background: linear-gradient(to bottom, #ea852d 0%, #ac5e11 100%);
+  background: linear-gradient(to bottom, #ffaeae 0%, #ff9225 100%);
   background-color: rgb(231, 186, 160);
-  color: #0c0b0b;
+  color: #2bff00;
   display: flex;
   justify-content: space-around;
   font-size: 30px;
   border-radius: 10px;
-  border: 5px solid rgb(113, 76, 30);
+  border: 5px solid rgb(255, 0, 200);
   margin: 10px;
-  color: #4c310f;
+  color: #ddff00;
   padding: 1em;
   flex: 1 1 25%;
 
 }
 
 .item:hover {
-  box-shadow: 5px 5px #f0a24f;
+  box-shadow: 5px 5px #00fff2;
 }
 
 .details {
-  color: brown;
+  color: rgb(72, 0, 255);
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -57,7 +57,7 @@ flex-wrap: wrap;
 }
 #menu-header{
 margin-top: 70vh;
-color: burlywood;
+color: rgb(255, 0, 0);
 }
 .menu-style {
   display: flex;
@@ -67,19 +67,22 @@ color: burlywood;
   justify-content: space-evenly;
   width: 100%;
 }
-.add-shopping{
-margin-top: 20px;
-font-size: 15px;
-}
+
 .icon {
   display: flex;
   padding: 10px;
 }
+
+.icon:hover {
+  color: rgb(255, 0, 212);
+}
+.add-shopping{
+margin-top: 20px;
+font-size: 15px;
+}
+
 .img{
   max-width: 50%;
-}
-.icon:hover {
-  color: rgb(113, 76, 30);
 }
 
 article.item .img {
